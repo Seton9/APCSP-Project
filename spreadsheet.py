@@ -2,7 +2,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 service = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-credentials = ServiceAccountCredentials.from_json_keyfile_name('client_keys.json', service)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('service_account_key.json', service)
 client = gspread.authorize(credentials)
 
 spreadsheet = client.open('Civics (Responses)').sheet1
